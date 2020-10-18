@@ -153,7 +153,7 @@ where
     }
 }
 
-/// Transform by mutable deref coercion (`&self |> DerefMut::deref_mut(self)`)
+/// Transform by mutable deref coercion (`&mut self |> DerefMut::deref_mut(self)`)
 pub trait OverDerefMut: DerefMut {
     fn over_deref_mut<F, Ret>(&mut self, f: F) -> Ret
     where
